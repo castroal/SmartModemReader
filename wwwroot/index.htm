@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="simple-grid.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3>Line rate</h3>
+                <canvas id="rate"></canvas>
+            </div>
+            <div class="col-6">
+                <h3>Line max rate</h3>
+                <canvas id="maxrate"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h3>Attenuation upload</h3>
+                <canvas id="attenuationup"></canvas>
+            </div>
+            <div class="col-6">
+                <h3>Attenuation download</h3>
+                <canvas id="attenuationdown"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3>Noise margin</h3>
+                <canvas id="noisemargin"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/update.js"></script>
+
+</body>
+
+</html>

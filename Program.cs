@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
 
 namespace SmartModemReader
 {
@@ -13,6 +15,11 @@ namespace SmartModemReader
                 Console.WriteLine("Usage:");
                 Console.WriteLine("1) Pass the IP address as first argument and the session ID as second.");
                 Console.WriteLine("2) To use the default address (192.168.1.1) pass only the session ID as first argument");
+                Console.WriteLine("3) To use the web app, pass 'web' as first argument followed by ip='ipaddress' (optional) and sid='sessionid'");
+            }
+            else if (args.Length > 0 && args[0] == "web")
+            {
+                BuildWebHost(args.Skip(1).ToArray()).Run();
             }
             else if (args.Length == 1)
             {
@@ -33,5 +40,10 @@ namespace SmartModemReader
 
             Console.WriteLine(data.ToPrettyString());
         }
+
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .Build();
     }
 }
