@@ -30,7 +30,7 @@ namespace SmartModemReader
                 string ip = Configuration["ip"] ?? "192.168.1.1";
                 string sid = Configuration["sid"] ?? throw new InvalidOperationException("Session id cannot be null");
                 
-                return new DslDataReader(sid, ip);
+                return new DslDataReader(sid, FirmwareVersion.v110b002, ip);
             });
         }
 

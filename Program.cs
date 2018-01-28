@@ -33,7 +33,7 @@ namespace SmartModemReader
 
         static void RunReader(string sessionId, string ip = "192.168.1.1")
         {
-            var reader = new DslDataReader(sessionId, ip);
+            var reader = new DslDataReader(sessionId, FirmwareVersion.v110b002, ip);
 
             var data = reader.ReadDataAsync().Result;
             // var data = reader.ReadSampleDataAsync().Result;

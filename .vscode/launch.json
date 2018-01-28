@@ -11,7 +11,8 @@
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/SmartModemReader.dll",
-            "args": ["web", "sid=7a0f34bc93bdc2100c2e1ab1250e66bfe1989331243337f0af5108cb1cc13da0"],
+            "args": ["web", "sid=2c463e116f2f7c786da19a7a8ca34701fce7a2d565769e25cd47a53b740ea411"],
+            // "args": ["2c463e116f2f7c786da19a7a8ca34701fce7a2d565769e25cd47a53b740ea411"],
             "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
             "console": "internalConsole",
